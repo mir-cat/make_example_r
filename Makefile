@@ -1,10 +1,13 @@
 # Dummy targets
 all: all_data output plots make_graph.png
+all_data: raw_data data
+
 raw_data: raw_data/raw_iris.csv	raw_data/raw_mtcars.csv
 data: data/edit_iris.csv data/edit_mtcars.csv
-all_data: raw_data data
+
 output: output/iris_models/
 plots: plots/plots.pdf
+
 make_graph: make_graph.png
 
 clean:
